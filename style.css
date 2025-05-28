@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.headicon{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; /* ทำให้กลม */
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 5rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    -webkit-text-stroke: 2px yellow;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #b74b4b;
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background-color: black;
+    max-width: 95%;
+}
+
+.home-content {
+    padding: -2rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: -10rem;
+}
+
+.about-me{
+    font-size: 5rem !important;
+    margin-bottom: 2rem;
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+}
+
+.home .home-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    word-spacing: 4px;
+    font-family: "Roboto", sans-serif;
+
+
+    span{
+        color: #b74b4b;
+        /* -webkit-text-stroke: 2px yellow; */
+    }
+}
+
+.text-col-1 {
+    font-size: 1.5rem;
+    text-overflow: ellipsis;
+    width: 105%;
+    word-spacing: 4px;
+
+    span{
+        color: #aecb08;
+        font-weight: 900;
+    }
+}
+
+.text-col-2 {
+    font-size: 1.5rem;
+    text-overflow: ellipsis;
+    width: 100%;
+    word-spacing: 4px;
+
+    span{
+        color: #aecb08;
+        font-weight: 900;
+    }
+}
+
+.text-col-3 {
+    font-size: 1.5rem;
+    text-overflow: ellipsis;
+    width: 100%;
+    word-spacing: 4px;
+
+    span{
+        color: #aecb08;
+        font-weight: 900;
+    }
+}
+
+.home img {
+    border-radius: 10%;
+    width: 25vw;
+    position: relative;
+    box-shadow: 0 0 25px solid;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home img:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* home-h3 effect (typing-like cursor) */
+.home-h3 span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #b74b4b;
+    position: relative;
+}
+
+.home-h3 span::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    width: 2px;
+    height: 100%;
+    background-color: black;
+    animation: cursorBlink 0.6s infinite;
+}
+
+@keyframes cursorBlink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.text-icon{
+    padding: 2rem 0;
+    font-size: 3rem;
+    /* font-family: 'Poppins', sans-serif; */
+    margin-bottom: 10rem;
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.icon-container {
+  display: flex;
+  flex-wrap: wrap; /* Responsive: ถ้าจอเล็กจะขึ้นบรรทัดใหม่ */
+  list-style: none;
+  padding: 0;
+  margin-top: -10rem;
+}
+
+.icon-container .icon {
+  width: 10%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translatex(-2.5rem);
+  transition: transform 0.3s ease;
+}
+
+.icon-container img {
+  width: 50%;
+  height: auto;
+}
+
+.icon-container .icon:hover {
+  transform: translateX(-2.5rem) scale(1.2);
+
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 3rem;
+
+
+    margin-top: -31rem;
+    margin-left: 60rem;
+}
+
+.text-contact h4{
+    display: flex;
+    font-size: 3rem;
+    margin-bottom: 20rem;
+    transform: translateX(24rem);
+}
+
+.icon-group {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 6rem;
+    transform: translateX(3rem);
+}
+
+.icon-group .icon a{
+    font-size: 4rem;     
+    color: white;
+    transition: transform 0.3s;
+    width: 100%;
+    height: 100%;
+    /* box-sizing: 10px solid red; */
+
+    /* จัดตรงกลาง */
+    display: flex;               
+    justify-content: center;      
+    align-items: center;          
+}
+
+
+.icon a:hover {
+    transform: scale(1.3);
+}
+
+@media (min-width: 431px) {
+  .toggleText {
+    display: block !important;
+  }
+
+  #toggleBtn {
+    display: none !important;
+  }
+}
+
