@@ -1,0 +1,9 @@
+[bulid]
+command = "npm run bulid"
+publish = "/bulid"
+base = "/"
+
+[[redirects]]
+from = "/*"
+to = "/Profile.html"
+status = 200
