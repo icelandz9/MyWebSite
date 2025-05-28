@@ -276,3 +276,11 @@
     }
 
 }
+
+
+@media only screen and (max-width: 1024px) and (min-width: 1024px) {
+    .icon-group {
+        top: 85rem !important; /* ค่าสำหรับ 14 Pro Max */
+        transform: translateX(-16.5rem) !important;
+    }
+}
