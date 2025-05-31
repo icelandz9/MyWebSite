@@ -84,17 +84,6 @@
         }
     }
 
-    #toggleBtn {
-        display: block;
-        margin: 2rem auto;
-        padding: 0.5rem 1rem;
-        background-color: whitesmoke;
-        border: none;
-        font-size: 1rem;
-        cursor: pointer;
-        color:darkblue;
-    }
-
     .text-icon {
         display: flex;
         flex-direction: column; 
@@ -128,10 +117,10 @@
 
 /* ------------------------------ หน้าจอขนาดกลาง ----------------------------- */
 
-@media screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     
 .contact-header{
-        margin-top:-7rem;
+        margin-top:-7rๅem;
 
         .text-contact-header {
         margin-bottom: 2rem !important;
@@ -199,10 +188,6 @@
         }
     }
 
-    #toggleBtn {
-        display: none;
-    }
-
     .text-icon {
         display: flex;
         flex-direction: column; 
@@ -233,4 +218,10 @@
         display: none;
     }   
 
+}
+
+@media only screen and (min-width: 560px) {
+    #toggleBtn {
+        display: none;
+    }
 }
