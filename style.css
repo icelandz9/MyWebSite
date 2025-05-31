@@ -13,12 +13,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.headicon{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%; /* ทำให้กลม */
-}
 
 html {
     font-size: 62.5%;
@@ -27,152 +21,154 @@ html {
 body {
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
     background-color: black;
     color: white;
 }
 
+/* ------------------ Header ---------------------- */
+
+
 header {
-    margin-top: 20px;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color: transparent;
+    background-color: #000;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+
+        .logo{
+            a{
+                font-size: 5rem;
+                color: #b74b4b;
+                font-weight: 800;
+                cursor: pointer;
+                transition: 0.5s ease; 
+
+                &:hover{
+                    transform: scale(1.1);
+                    /* -webkit-text-stroke: 2px yellow; */
+                    transition: 0.3s ease;
+                }
+            }
+
+        }
+
+        .manu{
+            font-size: 1.8rem;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+            display: flex;
+            list-style: none;
+            align-items: center;
+            
+            li{
+                margin: 0 2rem;
+
+                a{
+                    color: #ffff;
+                    transition: 0.3s ease;
+                    margin-right: 2rem;
+                    
+
+                    &:hover,&.active{
+                        color: #b74b4b;
+                        border-bottom: 3px solid #b74b4b;
+                        padding: 1rem;
+                        border-radius: 0.5rem;
+                        border-bottom: 0.5rem solid #b74b4b;
+                        
+                    }
+                }
+            }
+        }
+    }
 }
 
-.logo {
-    font-size: 5rem;
-    color: #b74b4b;
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
-}
+/* ------------------ Main ---------------------- */
 
-.logo:hover {
-    transform: scale(1.1);
-    -webkit-text-stroke: 2px yellow;
-}
-
-nav a {
-    font-size: 1.8rem;
-    color: white;
-    margin-left: 4rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-}
-
-nav a:hover,
-nav a.active {
-    color: #b74b4b;
-    border-bottom: 3px solid #b74b4b;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border-bottom: 0.5rem solid #b74b4b;
-}
-
-section {
-    min-height: 100vh;
-    padding: 5rem 9% 5rem;
-}
 
 .home {
+    margin-top: 0rem;
+    padding: 5rem 9% 5rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 5rem;
     background-color: black;
     max-width: 95%;
-}
 
-.home-content {
-    padding: -2rem;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    margin-top: -10rem;
-}
+    img {
+        border-radius: 10%;
+        width: 25vw;
+        position: relative;
+        box-shadow: 0 0 25px solid;
+        cursor: pointer;
+        transition: 0.2s linear;
 
-.about-me{
-    font-size: 5rem !important;
-    margin-bottom: 2rem;
-    font-family: "Roboto", sans-serif;
-    margin: 0 auto;
-}
-
-.home .home-content h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.3;
-    word-spacing: 4px;
-    font-family: "Roboto", sans-serif;
-
-
-    span{
-        color: #b74b4b;
-        /* -webkit-text-stroke: 2px yellow; */
+        &:hover{
+            transform: scale(1.05);
+        transition: 0.3s ease;
+        }
     }
-}
 
-.text-col-1 {
-    font-size: 1.5rem;
-    text-overflow: ellipsis;
-    width: 105%;
-    word-spacing: 4px;
+    .home-content {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
 
-    span{
-        color: #aecb08;
-        font-weight: 900;
+        .text-intro{
+            font-size: 2.3rem;
+        }
+
+        .text-name{
+            font-size: 2.3rem;
+            color: #b74b4b;
+        }
+
+        .about-me{
+            font-size: 4rem !important;
+            margin-bottom: 2rem;
+            font-family: "Roboto", sans-serif;
+            margin: 0 auto;
+
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+            word-spacing: 4px;
+            font-family: "Roboto", sans-serif;
+
+
+            span{
+                color: #b74b4b;
+                /* -webkit-text-stroke: 2px yellow; */
+            }
+        }
+
+        .text-col-p {
+            font-size: 1.1rem;
+            text-overflow: ellipsis;
+            width: 105%;
+            word-spacing: 4px;
+
+            span{
+                color: #aecb08;
+                font-weight: 900;
+            }
+        }
     }
-}
 
-.text-col-2 {
-    font-size: 1.5rem;
-    text-overflow: ellipsis;
-    width: 100%;
-    word-spacing: 4px;
-
-    span{
-        color: #aecb08;
-        font-weight: 900;
-    }
-}
-
-.text-col-3 {
-    font-size: 1.5rem;
-    text-overflow: ellipsis;
-    width: 100%;
-    word-spacing: 4px;
-
-    span{
-        color: #aecb08;
-        font-weight: 900;
-    }
-}
-
-.home img {
-    border-radius: 10%;
-    width: 25vw;
-    position: relative;
-    box-shadow: 0 0 25px solid;
-    cursor: pointer;
-    transition: 0.2s linear;
-}
-
-.home img:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease;
 }
 
 /* home-h3 effect (typing-like cursor) */
-.home-h3 span {
+/* .home-h3 span {
     font-size: 2rem;
     font-weight: bold;
     color: #b74b4b;
@@ -196,91 +192,80 @@ section {
     50% {
         opacity: 1;
     }
-}
+} */
 
 .text-icon{
-    padding: 2rem 0;
+    margin-top: 2rem;
     font-size: 3rem;
     /* font-family: 'Poppins', sans-serif; */
-    margin-bottom: 10rem;
     display: flex;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
 }
 
 .icon-container {
-  display: flex;
-  flex-wrap: wrap; /* Responsive: ถ้าจอเล็กจะขึ้นบรรทัดใหม่ */
-  list-style: none;
-  padding: 0;
-  margin-top: -10rem;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
 .icon-container .icon {
-  width: 10%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translatex(-2.5rem);
-  transition: transform 0.3s ease;
+    margin-top: 2rem;
+    width: 10%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 
 .icon-container img {
-  width: 50%;
-  height: auto;
+    width: 50%;
+    height: auto;
 }
 
-.icon-container .icon:hover {
-  transform: translateX(-2.5rem) scale(1.2);
-
-}
+/* ------------------ Footer ---------------------- */
 
 .contact {
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-    gap: 3rem;
+    margin-top: 3rem;
 
+    .text-contact {
+        h4{
+            font-size: 3rem;
+        }
+    }
 
-    margin-top: -31rem;
-    margin-left: 60rem;
-}
+    .icon-group{
+        display: flex;
+        list-style: none;
+        gap: 4rem;
 
-.text-contact h4{
-    display: flex;
-    font-size: 3rem;
-    margin-bottom: 20rem;
-    transform: translateX(24rem);
-}
+        .icon{
+            a{
+                font-size: 4rem;     
+                color: white;
+                transition: transform 0.3s;
+                width: 100%;
+                height: 100%;
+                margin-top: 3rem;
 
-.icon-group {
-    display: flex;
-    gap: 4rem;
-    margin-bottom: 6rem;
-    transform: translateX(3rem);
-}
+                /* จัดตรงกลาง */
+                display: flex;               ;
 
-.icon-group .icon a{
-    font-size: 4rem;     
-    color: white;
-    transition: transform 0.3s;
-    width: 100%;
-    height: 100%;
-    /* box-sizing: 10px solid red; */
+                &:hover {
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
 
-    /* จัดตรงกลาง */
-    display: flex;               
-    justify-content: center;      
-    align-items: center;          
 }
 
 
-.icon a:hover {
-    transform: scale(1.3);
-}
-
-@media (min-width: 431px) {
+@media (min-width: 1200px) {
   .toggleText {
     display: block !important;
   }
@@ -289,4 +274,3 @@ section {
     display: none !important;
   }
 }
-

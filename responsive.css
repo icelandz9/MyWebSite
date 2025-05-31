@@ -1,131 +1,59 @@
-/* 🔄 Responsive สำหรับหน้าจอเล็ก (มือถือ) */
-@media (max-width: 430px) {
-
-    /* แก้ scroll แนวนอนทั่วหน้า */
-    *, *::before, *::after {
-        box-sizing: border-box;
-        /* outline: 1px solid red; */
-    }
-
-    body {
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-
-    .section-title::after{
-        content: "PR9:23 / TUPR:20 / SWU:76";
-        font-size: 1.5rem;
-        color: white;
-        display: flex;
-        bottom: 10rem;
-        position: relative;
-        margin-left: 1rem;
-
-    }
-
-    .logo{
-        display: none !important;
-    }
-
-    .header{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-        width: 100%;
-    }
+@media screen and (max-width: 480px) {
 
     nav{
+        flex-direction: column;
+
+        .manu{
+            flex-direction: column;
+            align-items: start;
+            gap: 3rem;
+
+            li{
+                text-align: center !important;
+                /* padding: 2rem 0; */
+            }
+        }
+    }
+
+
+    
+    .home{
+        flex-direction: column;
+        margin: 0;
         display: flex;
-        flex-wrap: nowrap;
+        align-items: center; 
         justify-content: center;
-        gap: 2rem;
-    }
-
-    nav a {
-        text-decoration: none;
-        font-size: 1.5rem;
-        color: white;
-        margin: 0;    
-    }
-
-    .home-img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 1rem ;
-        margin-left: 1.5rem !important;
-        align-items: center !important;
-    }
-
-    .text-contact{
-        display: none;
-    }
+        text-align: center;
 
 
-    .icon-group {
-        position: absolute;
-        top:47rem;
-        left: 100%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 1rem;
-    }
+        img{
+            width: 70%;
+        }
 
-    .icon-group .icon a {
-        display: flex;
-        width: 4rem !important;            
-        height: 4rem !important;
-        font-size: 2rem ! important;
-    }
+        .home-content{
 
-    .about-me {
-        display: flex;
-        position: relative;
-        font-size: 2.5rem !important;
-        margin: 1rem 0;
-    }
+            .about-me{
+                font-size: 3rem !important;
+                margin-top: 10rem;
 
-    .text-name {
-        font-size: 2rem !important;
-    }
+            }
+        }
 
-    .text-name span {
-        font-size: 2rem;
-    }
+        .text-intro{
+            font-size: 2rem !important;
+            text-align: center;
+        }
 
-    .text-col-1,
-    .text-col-2,
-    .text-col-3{
-        text-align: left;
-        line-height: 2rem;
-        margin-bottom: 1rem;
-        max-width: 100%;
-        font-size: 1.1rem;
-        margin-left: 2rem !important;
-    }
+        .text-name{
+            font-size: 2rem !important;
+        }
 
-    .text-icon{
-        font-size: 2.5rem ;
-    }
-
-    .contact {
-    height: 0;
-    overflow: visible;
-}
-
-    .icon-container{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin-left: 5rem;
-        gap: 2rem !important;
-    }
-
-    .icon-container .icon img{
-        width: 150%;
-        height: auto;
+        .text-col-p{
+            max-width: 80%;
+            text-align: center !important;
+            margin: 1rem auto;
+            text-align: inherit !important;
+        }
     }
 
     #toggleBtn {
@@ -139,148 +67,49 @@
         color:darkblue;
     }
 
-}
-
-/* แยกแต่ละรุ่นถ้าต้องการค่าต่างกัน */
-/* iPhone 14 Pro (393px) */
-@media only screen and (max-width: 393px) and (min-width: 393px) {
-    .icon-group {
-        top: 47rem !important; /* ค่าสำหรับ 14 Pro */
-    }
-}
-
-/* iPhone 14 Pro Max (430px) */
-@media only screen and (max-width: 430px) and (min-width: 430px) {
-    .icon-group {
-        top: 50rem !important; /* ค่าสำหรับ 14 Pro Max */
-        transform: translateX(-16.5rem) !important;
-    }
-}
-
-
-
-/* 🔄 Responsive สำหรับหน้าจอเล็ก (Ipad) */
-@media (max-width: 1024px) {
-
-    body{
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-
-    header {
-        align-items: flex-start;
-        padding: auto;
-        position: relative; /* ให้ header scroll ไปกับเนื้อหา */
+    .text-icon {
+        display: flex;
+        flex-direction: column; /* จัดเรียงแนวตั้ง */
+        justify-content: center;
+        align-items: center;
+        margin: 2rem auto;
+        font-size: 2rem;
         text-align: center;
     }
 
-    .logo{
-        display: flex;
-        margin: -1rem 2rem;
-    }
-
-     nav {
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    nav a{
-        display: flex;
-        padding: 0 1rem;
-        background-attachment: inherit;
-        justify-content: space-between;
-    }
-
-    .home {
-        flex-direction: column;
-        gap: 5rem;
-        text-align: center;
-    }
-
-    .home-content{
-        align-items: center;
-        margin: -10vh 0;
-    }
-
-    .home-h3{
-
-        span{
-            flex-direction: column;
-            display: flex;
-        }
-    }
-    
-
-    .home img{
-        width: 50vw;
-        margin: 10vh 0;
-        margin-top: -1vh;
-        margin-left: 4rem;
-    }
-
-    .text-contact{
-        display: none;
-    }
-
-    .icon-group {
-        position: absolute;
-        top: 70rem;
-        margin-left: -21rem;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 0.5rem;
-    }
-
-    .icon-group .icon a {
-        display: flex;
-        width: 8rem ;            
-        height: 8rem ;
-        font-size: 4rem ;
-    }
-
-    .about-me{
-        margin-top: 1rem;
-        font-size: 4rem !important;
-    }
-
-    .text-name{
-        font-size: 2rem !important;
-        margin-top: 1rem;
-
-        span{
-            font-size: 2rem;
-        }
-    }
-
-    .text-col-1,
-    .text-col-2,
-    .text-col-3{
-        text-align: left;
-        font-size: 1.5rem;
-        width: 100%;
-        margin-left: 5rem !important;
-    }
-
-    .icon-container{
+    .icon-container {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 0;
+        margin: 1rem auto 0;
+        list-style: none;
     }
 
-    .icon-container img{
-        padding: 2rem 0;
-        width: 5rem;
+    .icon-container .icon img {
+        width: 3rem;
         height: auto;
     }
 
-}
+    .contact{
+        display: flex;
+        text-align: center;
 
+        .text-contact{
+            display: none;
+        }
 
-@media only screen and (max-width: 1024px) and (min-width: 1024px) {
-    .icon-group {
-        top: 85rem !important; /* ค่าสำหรับ 14 Pro Max */
-        transform: translateX(-16.5rem) !important;
+        .icon-group{
+            display: flex;              /* ต้องใช้ */
+            justify-content: center;   /* ให้ลูกๆ อยู่ตรงกลางแนวนอน */
+            align-items: center;       /* ถ้าต้องการให้จัดกลางแนวตั้ง */
+            gap: 2rem;                 /* ระยะห่างระหว่าง icon */
+            margin: 0 auto;
+            
+            a{
+                font-size: 2.5rem !important;
+            }
+        }
     }
 }
