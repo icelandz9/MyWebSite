@@ -1,3 +1,15 @@
+function togglemenu(x) {
+  x.classList.toggle("change");
+
+  let myMenu = document.getElementById("myMenu");
+  if (myMenu.className === "menu-text") {
+    myMenu.className += " menu-active";
+    console.log("เปิดเมนู");
+  } else {
+    myMenu.className = "menu-text";
+  }
+}
+
 const texts = [
     "Software Developer",
     "Web Designer",
