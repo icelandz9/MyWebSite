@@ -31,7 +31,6 @@ header {
   background-color: #000;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
 
-
   nav {
     display: flex;
     justify-content: space-between;
@@ -270,7 +269,6 @@ header {
   .toggleText {
     display: block !important;
   }
-
   #toggleBtn {
     display: none !important;
   }
@@ -278,7 +276,7 @@ header {
   .contact-header {
     display: none !important;
   }
-  .icon-menu{
+  .icon-menu {
     display: none !important;
   }
 }

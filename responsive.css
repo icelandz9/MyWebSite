@@ -12,11 +12,7 @@
     width: 10%;
     max-width: 400px;
     height: 100vh;
-    background: linear-gradient(
-      135deg,
-      rgb(1, 1, 29),
-      rgba(4, 1, 36, 0.959)
-    );
+    background: linear-gradient(135deg, rgb(1, 1, 29), rgba(4, 1, 36, 0.959));
     backdrop-filter: blur(15px);
     z-index: 9998;
 
@@ -206,40 +202,6 @@
     border-right: 3px solid #ffffff;
   }
 
-  /* ====================== Mobile Responsive ====================== */
-  @media (max-width: 768px) {
-    .menu-text {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    .menu-text li a {
-      font-size: 1.6rem;
-      padding: 1rem 1.2rem;
-    }
-
-    .icon-menu {
-      width: 40px;
-      height: 40px;
-      font-size: 1.3rem;
-      display: block;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .menu-text {
-      padding: 1.5rem;
-    }
-
-    .menu-text li a {
-      font-size: 2rem;
-      padding: 0.8rem 1rem;
-    }
-
-    .menu-text li {
-      margin: 1rem 0;
-    }
-  }
   /* ///////////////////// Header //////////////////////// */
 
   .contact-header {
@@ -324,6 +286,10 @@
     color: darkblue;
   }
 
+  .hidden {
+    display: none !important;
+  }
+
   .text-icon {
     display: flex;
     flex-direction: column;
@@ -353,8 +319,41 @@
   .contact {
     display: none;
   }
-}
 
+  @media (max-width: 768px) {
+    .menu-text {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .menu-text li a {
+      font-size: 1.6rem;
+      padding: 1rem 1.2rem;
+    }
+
+    .icon-menu {
+      width: 40px;
+      height: 40px;
+      font-size: 1.3rem;
+      display: block;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .menu-text {
+      padding: 1.5rem;
+    }
+
+    .menu-text li a {
+      font-size: 2rem;
+      padding: 0.8rem 1rem;
+    }
+
+    .menu-text li {
+      margin: 1rem 0;
+    }
+  }
+}
 
 /* ------------------------------ หน้าจอขนาดกลาง ----------------------------- */
 
@@ -453,12 +452,6 @@
   }
 
   .contact {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 560px) {
-  #toggleBtn {
     display: none;
   }
 }

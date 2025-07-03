@@ -1,95 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="apple-touch-icon" href=/img/shark.png">
   <link rel="shortcut icon" href="/img/shark.png" type="image/x-icon">
   <link rel="stylesheet" href="responsive.css">
 
 </head>
+
 <body>
 
   <header>
-      <nav>
-         <div class="logo">
-            <a href="#">
-               <h1>ICE</h1>
-            </a>
-         </div>
+    <nav>
+      <div class="logo">
+        <a href="#">
+          <h1>ICE</h1>
+        </a>
+      </div>
 
-         <ul class="menu-text" id="myMenu">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-         </ul>
+      <ul class="menu-text" id="myMenu">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-         <div class="icon-menu" onclick="togglemenu(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-         </div>
-      </nav>
-   </header>
+      <div class="icon-menu" onclick="togglemenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+  </header>
 
   <section class="home">
 
     <div>
       <img src="/img/me.jpg" alt="Profile Image" class="home-img" />
-    </div> 
+    </div>
     <div class="contact-header">
-        <div class="text-contact-header">PR9:23 / TUPR:20 / SWU:76</div>
-          <ul class="icon-group-header">
-            <li class="icon">
-              <a href="https://www.instagram.com/icesland_/" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="icon">
-              <a href="https://www.facebook.com/icejirateep" target="_blank"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li class="icon">
-              <a href="https://github.com/icelandz9" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-            <li class="icon">
-              <a href="https://discord.com/users/726412273609867285" target="_blank"><i class="fab fa-discord"></i></a>
-            </li>
-            <li class="icon">
-              <a href="https://x.com/Icelandz9" target="_blank"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li class="icon">
-              <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </li>
-          </ul>
+      <div class="text-contact-header">PR9:23 / TUPR:20 / SWU:76</div>
+      <ul class="icon-group-header">
+        <li class="icon">
+          <a href="https://www.instagram.com/icesland_/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="icon">
+          <a href="https://www.facebook.com/icejirateep" target="_blank"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li class="icon">
+          <a href="https://github.com/icelandz9" target="_blank"><i class="fab fa-github"></i></a>
+        </li>
+        <li class="icon">
+          <a href="https://discord.com/users/726412273609867285" target="_blank"><i class="fab fa-discord"></i></a>
+        </li>
+        <li class="icon">
+          <a href="https://x.com/Icelandz9" target="_blank"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="icon">
+          <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </li>
+      </ul>
     </div>
 
     <div class="home-content">
       <h1 class="about-me">About Me</h1>
       <h2 class="text-intro">Greetings! I'm <span class="text-name"> Jirateep Lertpattanasak
         </span> — or just <span class="text-name">Ice</span></h1>
-      <br>
-      <p class="toggleText text-col-p">
-        I completed my high school education in 
-        <span>the Science-Mathematics and Artificial Intelligence (S-MAI)</span> 
-        special program at Triam Udom Suksa Pattanakarn Ratchada School, 
-        as part of the inaugural cohort of this pioneering curriculum.
-      </p>
-      <br>
-      <p class="toggleText text-col-p">
-        Currently, I am pursuing a degree in 
-        <span>Computer Engineering at Srinakharinwirot University</span> as part of the 12th cohort.
-      </p>
-      <br>
-      <p class="toggleText text-col-p">
-        In the future, I want to work in the field of 
-        <span id="dynamic-text">Web Developer</span> 
-        with a strong interest in web development. I am committed to becoming a Full-Stack developer who builds websites that are user-friendly, fast, modern, and highly secure.
-      </p>
-      <button id="toggleBtn">▼ Read more</button>
+        <br>
+        <p class="toggleText text-col-p">
+          I completed my high school education in
+          <span>the Science-Mathematics and Artificial Intelligence (S-MAI)</span>
+          special program at Triam Udom Suksa Pattanakarn Ratchada School,
+          as part of the inaugural cohort of this pioneering curriculum.
+        </p>
+        <br>
+        <p class="toggleText text-col-p">
+          Currently, I am pursuing a degree in
+          <span>Computer Engineering at Srinakharinwirot University</span> as part of the 12th cohort.
+        </p>
+        <br>
+        <p class="toggleText text-col-p">
+          In the future, I want to work in the field of
+          <span id="dynamic-text">Web Developer</span>
+          with a strong interest in web development. I am committed to becoming a Full-Stack developer who builds
+          websites that are user-friendly, fast, modern, and highly secure.
+        </p>
 
-      <div class="text-icon">These are my skills.</div>
+        <button id="toggleBtn">▼ Read more</button>
+
+        <div class="text-icon">These are my skills.</div>
         <ul class="icon-container">
           <li class="icon"><img src="/img/html.png" alt="HTML" /></li>
           <li class="icon"><img src="/img/css.png" alt="CSS" /></li>
@@ -97,12 +100,14 @@
           <li class="icon"><img src="/img/C++.png" alt="c+=" /></li>
           <li class="icon"><img src="/img/python.png" alt="c+=" /></li>
           <li class="icon"><img src="/img/tailwind.png" alt="Tailwind" /></li>
-          </ul>
+        </ul>
 
-           <!-- Contact social media-->
-      <div class="contact">
-        <div class="text-contact"><h4>Contact Me.</h4></div>
-          <ul class="icon-group" >
+        <!-- Contact social media-->
+        <div class="contact">
+          <div class="text-contact">
+            <h4>Contact Me.</h4>
+          </div>
+          <ul class="icon-group">
             <li class="icon">
               <a href="https://www.instagram.com/icesland_/" target="_blank"><i class="fab fa-instagram"></i></a>
             </li>
@@ -123,9 +128,11 @@
             </li>
           </ul>
         </div>
-      </div>
+    </div>
   </section>
 
   <script src="script.js"></script>
+
 </body>
+
 </html>

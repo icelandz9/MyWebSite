@@ -11,39 +11,39 @@ function togglemenu(x) {
 }
 
 const texts = [
-    "Software Developer",
-    "Web Designer",
-    "UI/UX Enthusiast",
-    "Full Stack Developer"
-  ];
-  let index = 0;
-  const textSpan = document.getElementById("dynamic-text");
+  "Software Developer",
+  "Web Designer",
+  "UI/UX Enthusiast",
+  "Full Stack Developer",
+];
+let index = 0;
+const textSpan = document.getElementById("dynamic-text");
 
-  setInterval(() => {
-    index = (index + 1) % texts.length;
-    textSpan.textContent = texts[index];
-  }, 3000); // เปลี่ยนข้อความทุก 3 วินาที
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("toggleBtn");
+  const texts = document.querySelectorAll(".toggleText");
 
-if (window.innerWidth <= 430) {
-  const toggleBtn = document.getElementById('toggleBtn');
-  const texts = document.querySelectorAll('.toggleText');
-  let expanded = false;
+  if (window.innerWidth <= 430) {
+    let expanded = false;
 
-  // เริ่มต้นซ่อน p ที่ 2 และ 3
-  for (let i = 1; i < texts.length; i++) {
-    texts[i].style.display = 'none';
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    expanded = !expanded;
-
+    // ซ่อนข้อความที่ 2 และ 3
     for (let i = 1; i < texts.length; i++) {
-      texts[i].style.display = expanded ? 'block' : 'none';
+      texts[i].classList.add("hidden");
     }
 
-    toggleBtn.textContent = expanded ? '▲ Read less' : '▼ Read more';
-  });
-}
+    toggleBtn.addEventListener("click", () => {
+      expanded = !expanded;
 
+      for (let i = 1; i < texts.length; i++) {
+        texts[i].classList.toggle("hidden", !expanded);
+      }
 
-console.log("Hello World")
+      toggleBtn.textContent = expanded ? "▲ Read less" : "▼ Read more";
+    });
+  } else {
+    // ถ้าจอใหญ่กว่า 430px ซ่อนปุ่ม
+    toggleBtn.style.display = "none";
+  }
+});
+
+console.log("Hello World");
